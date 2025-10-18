@@ -21,23 +21,23 @@ const testimonialData = [
     message:
       "در معماری و نقشه‌برداری، هر خط و هر نقطه نشان از آینده‌ای دارد که در ذهن طراحان متولد می‌شود. تیم ما با همکاری و دقت، آنچه را که در تخیل است به دنیای واقعی می‌آورد.",
   },
-]
+];
 
 // import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination } from "swiper"
+import { Navigation, Pagination } from "swiper/modules";
 
 // icons
-import { FaQuoteLeft } from "react-icons/fa"
+import { FaQuoteLeft } from "react-icons/fa";
 
-import Image from "next/image"
+import Image from "next/image";
 
 // components
 
@@ -48,7 +48,7 @@ const TestimonialSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={{ Navigation, Pagination }}
+      modules={[Navigation, Pagination]}
       className="h-[362px] sm:h-[480px]"
     >
       {testimonialData.map((person, index) => {
@@ -83,10 +83,10 @@ const TestimonialSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-        )
+        );
       })}
     </Swiper>
-  )
-}
+  );
+};
 
-export default TestimonialSlider
+export default TestimonialSlider;

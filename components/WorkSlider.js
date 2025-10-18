@@ -42,23 +42,23 @@ const workSlides = {
       ],
     },
   ],
-}
+};
 
 // import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
-import "swiper/css"
-import "swiper/css/free-mode"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper"
+import { Pagination } from "swiper/modules";
 
 // icons
-import { BsArrowLeft } from "react-icons/bs"
+import { BsArrowLeft } from "react-icons/bs";
 
-import Image from "next/image"
+import Image from "next/image";
 
 const WorkSlider = () => {
   return (
@@ -67,7 +67,7 @@ const WorkSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={{ Pagination }}
+      modules={[Pagination]}
       className="h-[280px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, index) => {
@@ -105,14 +105,14 @@ const WorkSlider = () => {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </SwiperSlide>
-        )
+        );
       })}
     </Swiper>
-  )
-}
+  );
+};
 
-export default WorkSlider
+export default WorkSlider;

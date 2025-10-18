@@ -6,7 +6,7 @@ import {
   RxReader,
   RxRocket,
   RxArrowTopRight,
-} from "react-icons/rx"
+} from "react-icons/rx";
 
 // data
 export const serviceData = [
@@ -40,18 +40,18 @@ export const serviceData = [
     description:
       "مهندسین عمران بر حفظ و نگهداری زیرساخت‌ها نظارت دارند و برنامه‌های بهبود ارائه می‌دهند",
   },
-]
+];
 
 // import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
-import "swiper/css"
-import "swiper/css/free-mode"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper"
+import { FreeMode, Pagination } from "swiper/modules";
 
 const ServiceSlider = () => {
   return (
@@ -70,7 +70,7 @@ const ServiceSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={{ FreeMode, Pagination }}
+      modules={[FreeMode, Pagination]}
       className="h-[200px] sm:h-[365px] xl:mt-10"
     >
       {serviceData.map((item, index) => {
@@ -95,10 +95,10 @@ const ServiceSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-        )
+        );
       })}
     </Swiper>
-  )
-}
+  );
+};
 
-export default ServiceSlider
+export default ServiceSlider;

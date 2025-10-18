@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 // icons
 import {
@@ -8,14 +8,14 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 import {
   SiNextdotjs,
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
-} from "react-icons/si"
+} from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -72,37 +72,41 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          { icon: <FaHtml5 />, id: 1 },
+          { icon: <FaCss3 />, id: 2 },
+          { icon: <FaJs />, id: 3 },
+          { icon: <FaReact />, id: 4 },
+          { icon: <SiNextdotjs />, id: 5 },
+          { icon: <SiFramer />, id: 6 },
+          { icon: <FaWordpress />, id: 7 },
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          { icon: <FaFigma />, id: 8 },
+          { icon: <SiAdobexd />, id: 9 },
+          { icon: <SiAdobephotoshop />, id: 10 },
+        ],
       },
     ],
   },
-]
+];
 
 // components
-import Avatar3 from "../../components/Avatar3"
-import Circles from "../../components/Circles"
+import Avatar3 from "../../components/Avatar3";
+import Circles from "../../components/Circles";
 
 // framer motion
-import { motion } from "framer-motion"
-import { fadeIn } from "../../variants"
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 //counter
-import CountUp from "react-countup"
+import CountUp from "react-countup";
 
 const About = () => {
-  const [index, setIndex] = useState(3)
-  console.log(index)
+  const [index, setIndex] = useState(3);
+  console.log(index);
 
   return (
     <div className="h-full w-full bg-primary/30 py-32 text-center xl:text-right">
@@ -215,7 +219,7 @@ const About = () => {
                 >
                   {item.title}
                 </div>
-              )
+              );
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-end ">
@@ -231,25 +235,25 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4 ">
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
+                    {item.icons?.map((iconObj) => {
                       return (
                         <div
-                          key={itemIndex}
+                          key={iconObj.id}
                           className="text-2xl transition-all duration-500 text-white"
                         >
-                          {icon}
+                          {iconObj.icon}
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
