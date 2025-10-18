@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  distDir: "out",
+  basePath: "/sarzamin_omran",
+  assetPrefix: "/sarzamin_omran/",
 };
 
 module.exports = nextConfig;

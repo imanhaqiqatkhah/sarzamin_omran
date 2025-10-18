@@ -2,16 +2,14 @@
   "name": "sarzamin_omran",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://imanhaqiqatkhah.github.io/sarzamin_omran",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rimraf .next",
-    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d out"
   },
-  "homepage": "https://imanhaqiqatkhah.github.io/sarzamin_omran",
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
